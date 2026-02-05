@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": [
+    "heroui",
+    "moeys",
+    "ចូលគណនី",
+    "ទំព័រដើម",
+    "បណ្ណាល័យ",
+    "ប្រព័ន្ធចុះឈ្មោះ",
+    "ប្រវត្តិកីឡាករ",
+    "ភាសាខ្មែរ",
+    "សហព័ន្ធកីឡាជាតិ",
+    "អង្គភាពចំណុ"
+  ]
+}

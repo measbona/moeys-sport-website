@@ -1,65 +1,269 @@
-import Image from "next/image";
+"use client";
+import { Image } from "@heroui/react"
+
+import * as Images from "@/images"
+import * as Banners from "@/assets/banners"
+
+import MainHeader from "@/components/main-header";
+import MainFooter from "@/components/main-footer";
+
+import ArticleCard from "@/components/article-card";
+import AthleteCard from "@/components/athlete-card";
+import { PartnerCard } from "@/components/partner-card";
+import SectionHeader from "@/components/section-header";
+import RegulationCard from "@/components/regulation-card";
+import ConfederationCard from "@/components/confederation-card";
 
 export default function Home() {
+  const confederations = [
+    {
+      title: "សហព័ន្ធកីឡា",
+      subtitle: "បាល់ទាត់កម្ពុជា",
+      src: Images.footballConfederation
+    },
+    {
+      title: "សហព័ន្ធកីឡា",
+      subtitle: "អេឡិចត្រូនិច",
+      src: Images.electronicConfederation
+    },
+    {
+      title: "សហព័ន្ធកីឡាប៊ូល",
+      subtitle: "និងប៉េតង់",
+      src: Images.betonConfederation
+    },
+    {
+      title: "សហព័ន្ធខ្មែរ",
+      subtitle: "កីឡាហែលទឹក",
+      src: Images.swimConfederation
+    },
+    {
+      title: "សហព័ន្ធកីឡា",
+      subtitle: "បាល់ទះកម្ពុជា",
+      src: Images.volleyConfederation
+    },
+    {
+      title: "សហព័ន្ធកីឡាសីដក់",
+      subtitle: "និងឈិនឡូន",
+      src: Images.chinlonConfederation
+    },
+  ]
+
+  const regulations= [
+    {
+      id: "០១",
+      title: "ប្រព័ន្ធចុះឈ្មោះប្រកួតសិស្សបឋម",
+    },
+    {
+      id: "០២",
+      title: "ប្រព័ន្ធចុះឈ្មោះប្រកួតសិស្សមធ្យម",
+    },
+    {
+      id: "០៣",
+      title: "ប្រព័ន្ធចុះឈ្មោះប្រកួតឧត្តមសិក្សា",
+    },
+    {
+      id: "០៤",
+      title: "ប្រព័ន្ធចុះឈ្មោះប្រកួតកីឡាជាតិ",
+    },
+  ]
+
+  const athletes = [
+    {
+      id: "1",
+      name: "ស៊ុន សុភក្តិ",
+      role: "កីឡាករជម្រើសជាតិ",
+      avatar: Banners.althele,
+    },
+    {
+      id: "2",
+      name: "ឯម លាភ",
+      role: "កីឡាករជម្រើសជាតិ",
+      avatar: Banners.althele,
+    },
+    {
+      id: "3",
+      name: "ពេជ សុវណ្ណ",
+      role: "កីឡាករជម្រើសជាតិ",
+      avatar: Banners.althele,
+    },
+    {
+      id: "4",
+      name: "ភូ សុខា",
+      role: "កីឡាករជម្រើសជាតិ",
+      avatar: Banners.althele,
+    },
+    {
+      id: "5",
+      name: "ជា សុខា",
+      role: "កីឡាករជម្រើសជាតិ",
+      avatar: Banners.althele,
+    },
+  ]
+
+  const partners = [
+    {
+      id: "1",
+      name: "The KOI",
+      logo: Banners.koi,
+    },
+    {
+      id: "2",
+      name: "Kofi",
+      logo: Banners.kofi,
+    },
+    {
+      id: "3",
+      name: "Konfulon",
+      logo: Banners.konfulon,
+    },
+    {
+      id: "4",
+      name: "Ethernom",
+      logo: Banners.ethernom,
+    },
+  ]
+
+  const articles = [
+    {
+      id: "1",
+      date: "២៥ មករា ២០២៥",
+      title:
+        "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
+      excerpt:
+        "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
+      image: Banners.article,
+      href: "/news/1",
+    },
+    {
+      id: "2",
+      date: "២៥ មករា ២០២៥",
+      title:
+        "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
+      excerpt:
+        "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
+      image: Banners.article,
+      href: "/news/1",
+    },
+    {
+      id: "3",
+      date: "២៥ មករា ២០២៥",
+      title:
+        "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
+      excerpt:
+        "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
+      image: Banners.article,
+      href: "/news/1",
+    },
+    {
+      id: "4",
+      date: "២៥ មករា ២០២៥",
+      title:
+        "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
+      excerpt:
+        "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
+      image: Banners.article,
+      href: "/news/1",
+    },
+  ]
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="flex flex-col min-h-screen dark:bg-black">
+      <MainHeader />
+      <main className="flex-1 overflow-hidden">
+        <div className="flex flex-col gap-5">
+          <div className="w-full">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              alt="banner"
+              src={Banners.banner1}
+              className="w-full object-cover"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
+          <SectionHeader title="សហព័ន្ធកីឡាជាតិ" seeMore={{ label: "មើលបន្ថែមទៀត" }}>
+            <div className="flex justify-center gap-20">
+              {confederations.map((confederation, index) => (
+                <ConfederationCard
+                  key={index}
+                  title={confederation.title}
+                  subtitle={confederation.subtitle}
+                  src={confederation.src}
+                />
+              ))}
+            </div>
+          </SectionHeader>
+
+          <SectionHeader title="អត្តពលិកកម្ពុជាឈ្នះមេដាយដំបូងនៅកម្ពុជា" titleAlign="center" mainWrapper="bg-zinc-100">
+            <div className="flex justify-center">
+              <Image
+                width={900}
+                alt="banner"
+                src={Banners.subBanner1}
+                className="w-full object-cover rounded-xl"
+              />
+            </div>
+          </SectionHeader>
+
+          <SectionHeader title="ប្រព័ន្ធចុះឈ្មោះទាំងអស់សម្រាប់ការប្រកួត">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {regulations.map((item) => (
+                <RegulationCard
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                />
+              ))}
+            </div>
+          </SectionHeader>
+
+          <SectionHeader title="ប្រវត្តិកីឡាករ" mainWrapper="bg-zinc-100">
+            <div className="flex justify-center gap-20">
+              {athletes.map((athlete) => (
+                <AthleteCard
+                  key={athlete.id}
+                  name={athlete.name}
+                  role={athlete.role}
+                  avatar={athlete.avatar}
+                />
+              ))}
+            </div>
+          </SectionHeader>
+
+          <SectionHeader title="ព័ត៌មានចុងក្រោយពីអគ្គនាយកដ្ឋានកីឡា" seeMore={{ label: "មើលព័ត៌មានច្រើនទៀត" }}>
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+              {articles.map((article) => (
+                <ArticleCard
+                  key={article.id}
+                  article={article}
+                />
+              ))}
+            </div>
+          </SectionHeader>
+
+          <SectionHeader title="ដៃគូសហការរបស់យើង" titleAlign="center">
+            <div className="overflow-hidden border border-zinc-200 bg-white">
+              <div
+                className="
+                  grid
+                  grid-cols-2
+                  md:grid-cols-4
+                  divide-x
+                  divide-zinc-200
+                "
+              >
+                {partners.map((partner) => (
+                  <div key={partner.id} className="h-32">
+                    <PartnerCard
+                      logo={partner.logo}
+                      name={partner.name}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SectionHeader>
         </div>
+        <MainFooter />
       </main>
-    </div>
+    </div> 
   );
 }

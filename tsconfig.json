@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/icons": ["./src/assets/icons/index.ts"],
+      "@/images": ["./src/assets/images/index.ts"],
+      "@/components/*": ["./src/components/*", "./src/components/ui/*"],
     }
   },
   "include": [
