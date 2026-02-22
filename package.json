@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@heroui/react": "^2.8.7",
+    "@heroui/react": "^2.8.9",
+    "@heroui/theme": "^2.4.26",
     "clsx": "^2.1.1",
     "framer-motion": "^12.29.2",
     "lucide-react": "^0.563.0",

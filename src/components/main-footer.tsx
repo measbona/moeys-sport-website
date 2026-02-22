@@ -8,7 +8,7 @@ import { toKhmerNumber } from "@/utils/to-khmer-number"
 
 export default function MainFooter() {
   return (
-    <footer className="bg-[#121212] text-white">
+    <footer className="bg-[#121212] text-white mt-16">
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid gap-8 md:grid-cols-2">
           {/* Left */}

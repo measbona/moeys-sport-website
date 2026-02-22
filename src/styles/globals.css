@@ -1,3 +1,4 @@
+@tailwind utilities;
 @import "tailwindcss";
 
 :root {
@@ -23,4 +24,50 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-khmer);
+}
+
+/* Swiper Pagination Container */
+.swiper-pagination {
+  bottom: 35px !important;
+  display: flex;
+  justify-content: center;
+}
+
+/* Rounded glass background */
+.swiper-pagination::after {
+  content: "";
+  position: absolute;
+  padding: 12px 40px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* Default bullet */
+.swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: white;
+}
+
+/* Hide scrollbar but keep scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & old Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }

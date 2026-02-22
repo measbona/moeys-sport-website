@@ -5,7 +5,7 @@ type Props = {
   name: string
 }
 
-export function PartnerCard({ logo, name }: Props) {
+export default function PartnerCard({ logo, name }: Props) {
   return (
     <div className="flex items-center justify-center h-full">
       <Image

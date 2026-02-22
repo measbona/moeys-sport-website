@@ -1,3 +1,4 @@
+"use client";
 import { Image } from "@heroui/react"
 import Typography from "@/components/typography"
 
@@ -9,22 +10,20 @@ type Props = {
 
 export default function AthleteCard({ name, role, avatar }: Props) {
   return (
-    <div className="flex flex-col items-center text-center">
-      <div className="mb-4 rounded-full border-8 border-zinc-100">
+    <div className="flex flex-col items-center cursor-pointer">
+      <div className="mb-4 w-[170px] h-[170px] overflow-hidden rounded-full border-zinc-100">
         <Image
-          src={avatar}
           alt={name}
-          width={160}
-          height={150}
-          className="rounded-full object-cover"
+          src={avatar}
+          className="w-[170px] h-[170px] rounded-full object-cover object-center aspect-square border-4 border-[#EBEBEB]"
         />
       </div>
 
-      <Typography variant="h4" className="font-khmer">
+      <Typography variant="h4" className="leading-[1.55]">
         {name}
       </Typography>
 
-      <Typography variant="body2" className="mt-1 text-zinc-400">
+      <Typography variant="body2" className="text-zinc-400 leading-[1.55]">
         {role}
       </Typography>
     </div>

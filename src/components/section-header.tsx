@@ -23,8 +23,8 @@ export default function SectionHeader({ title, seeMore, titleAlign = "start", ch
   const hasSeeMore = Boolean(seeMore)
 
   return (
-    <div className={clsx("pb-10", mainWrapper)}>
-      <div className={clsx("flex items-center justify-between mx-auto w-full max-w-6xl my-10", {
+    <div className={clsx(mainWrapper, "py-10")}>
+      <div className={clsx("flex items-center justify-between mx-auto w-full max-w-6xl mb-10", {
         ["justify-center"]: titleAlign === "center" && !seeMore,
         ["justify-start"]: titleAlign === "start" && !seeMore
       })}>

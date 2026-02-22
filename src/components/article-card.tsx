@@ -4,9 +4,9 @@ import Typography from "@/components/typography"
 type Props = {
   article: {
     id: string
-    title: string
-    excerpt: string
     date: string
+    title: string
+    description: string
     image: string
     href?: string
   }
@@ -14,47 +14,34 @@ type Props = {
 
 export default function ArticleCard({ article }: Props) {
   return (
-    <div className="flex flex-col gap-4">
-      {/* Image */}
-      <div className="overflow-hidden rounded-2xl">
+    <div className="flex flex-col w-[350px]">
+      <div className="overflow-hidden rounded-t-2xl mb-1">
         <Image
           src={article.image}
           alt={article.title}
-          className="w-full h-[220px] object-cover"
+          className="object-cover"
         />
       </div>
 
-      {/* Date */}
-      <Typography
-        variant="body2"
-        className="text-zinc-400"
-      >
-        {article.date}
-      </Typography>
+      <div className="flex flex-col gap-2 p-2.5">
+        <Typography variant="body7" className="text-[#B2B2B2]">
+          {article.date}
+        </Typography>
 
-      {/* Title */}
-      <Typography
-        variant="h4"
-        className="line-clamp-2"
-      >
-        {article.title}
-      </Typography>
+        <Typography variant="sub1" className="line-clamp-2 leading-[1.55]">
+          {article.title}
+        </Typography>
 
-      {/* Excerpt */}
-      <Typography
-        variant="body2"
-        className="text-zinc-500 line-clamp-3"
-      >
-        {article.excerpt}
-      </Typography>
+        <Typography variant="body6" className="text-[#666666] line-clamp-3 leading-[1.55]">
+          {article.description}
+        </Typography>
 
-      {/* Read more */}
-      <a
-        href={article.href ?? "#"}
-        className="text-[#349FD8] font-medium w-fit"
-      >
-        អានបន្ថែម
-      </a>
+        <div className="flex items-center gap-2 cursor-pointer group mt-3" onClick={() => {}}>
+          <Typography variant="body5" className="text-[#349FD8] group-hover:underline">
+            មើលលម្អិត
+          </Typography>
+        </div>
+      </div>
     </div>
   )
 }
