@@ -2,7 +2,9 @@
 import { Button } from "@heroui/react";
 
 import * as Images from "@/images"
+import * as Banners from "@/assets/banners"
 
+import HeaderSeparator from "@/components/header-separator";
 import Typography from "@/components/ui/typography";
 import SectionHeader from "@/components/section-header";
 import FederationCard from "@/components/federation-card";
@@ -103,6 +105,13 @@ export default function FederationPage() {
 
   return (
     <div className="mt-16">
+      <HeaderSeparator
+        slug="សហព័ន្ធកីឡាជាតិ"
+        title="សហព័ន្ធកីឡាជាតិ"
+        description="ផ្តល់ព័ត៌មានថ្មីៗអំពីសកម្មភាពកីឡាការប្រកួតការជ្រើសរើសកីឡាករនិងសេចក្តីជូនដំណឹងសំខាន់ៗពីស្ថាប័នកីឡាជាតិដើម្បីឲ្យសាធារណជនទាន់ដឹងព័ត៌មានទាន់ពេលវេលា។"
+        image={Banners.subBanner1}
+      />
+
       <SectionHeader title="សហព័ន្ធកីឡាជាតិទាំងអស់នៅក្នុងប្រទេសកម្ពុជា">
         <div className="grid grid-cols-5 gap-10 mb-16">
           {federations.map((confederation, index) => (

@@ -9,12 +9,8 @@ type Props = {
 
 export default function ConfederationCard({ title, subtitle, src } : Props) {
   return (
-    <div className="flex flex-col gap-3">
-      <Image
-        src={src}
-        width={140}
-        alt={title + subtitle}
-      />
+    <div className="flex flex-col gap-3 items-center">
+      <Image src={src} width={140} alt={title + subtitle} />
 
       <div className="flex-col flex gap-2 items-center">
         <Typography className="font-medium">{title}</Typography>

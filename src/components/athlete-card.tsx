@@ -8,6 +8,7 @@ type Props = {
   avatar: string
 }
 
+// TODO: Hover on this card and change content to more info
 export default function AthleteCard({ name, role, avatar }: Props) {
   return (
     <div className="flex flex-col items-center cursor-pointer">
