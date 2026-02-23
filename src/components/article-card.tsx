@@ -32,12 +32,12 @@ export default function ArticleCard({ article }: Props) {
           {article.title}
         </Typography>
 
-        <Typography variant="body6" className="text-[#666666] line-clamp-3 leading-[1.55]">
+        <Typography variant="body4" className="text-[#666666] line-clamp-3 leading-[1.55]">
           {article.description}
         </Typography>
 
         <div className="flex items-center gap-2 cursor-pointer group mt-3" onClick={() => {}}>
-          <Typography variant="body5" className="text-[#349FD8] group-hover:underline">
+          <Typography variant="body4" className="text-[#349FD8] group-hover:underline">
             មើលលម្អិត
           </Typography>
         </div>

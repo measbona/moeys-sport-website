@@ -1,11 +1,12 @@
 "use client";
 import { Image } from "@heroui/react"
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
 import * as Images from "@/images"
 import * as Banners from "@/assets/banners"
@@ -131,6 +132,11 @@ export default function Home() {
       name: "Ethernom",
       logo: Banners.ethernom,
     },
+    {
+      id: "5",
+      name: "Ethernom",
+      logo: Banners.ethernom,
+    }
   ]
 
   const articles = [
@@ -197,10 +203,13 @@ export default function Home() {
       <div className="w-full">
         <Swiper
           loop
+          speed={2000}
           spaceBetween={20}
           autoplay={{ delay: 3000 }}
+          effect="fade"
           className="object-contain"
-          modules={[Autoplay, Pagination]}
+          modules={[Autoplay, Pagination, EffectFade]}
+          fadeEffect={{ crossFade: true }}
           pagination={{ clickable: true }}
         >
           {banners.map((bannerSrc, index) => (
@@ -234,10 +243,13 @@ export default function Home() {
         <div className="flex justify-center rounded-2xl">
           <Swiper
             loop
+            speed={2000}
             spaceBetween={20}
-            className="object-contain rounded-2xl"
             autoplay={{ delay: 3000 }}
-            modules={[Autoplay, Pagination]}
+            effect="fade"
+            className="object-contain"
+            modules={[Autoplay, Pagination, EffectFade]}
+            fadeEffect={{ crossFade: true }}
             pagination={{ clickable: true }}
           >
             {subBanners.map((bannerSrc, index) => (
@@ -302,16 +314,15 @@ export default function Home() {
       </SectionHeader>
 
       <SectionHeader title="ដៃគូសហការរបស់យើង" titleAlign="center">
-        <div className="overflow-hidden border border-zinc-200 bg-white">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-zinc-200">
+        <div className="overflow-x-auto overflow-y-hidden no-scrollbar border border-zinc-200 bg-white">
+          <div className="flex min-w-max divide-x divide-zinc-200">
             {partners.map((partner) => (
-              <div key={partner.id} className="h-32">
                 <PartnerCard
+                  key={partner.id}
                   logo={partner.logo}
                   name={partner.name}
                 />
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </SectionHeader>

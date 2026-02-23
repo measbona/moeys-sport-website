@@ -19,11 +19,11 @@ export default function AthleteCard({ name, role, avatar }: Props) {
         />
       </div>
 
-      <Typography variant="h4" className="leading-[1.55]">
+      <Typography variant="h4" className="leading-[1.55] mb-1">
         {name}
       </Typography>
 
-      <Typography variant="body2" className="text-zinc-400 leading-[1.55]">
+      <Typography variant="body4" className="text-zinc-400 leading-[1.55]">
         {role}
       </Typography>
     </div>
