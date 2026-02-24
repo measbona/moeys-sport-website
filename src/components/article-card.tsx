@@ -14,7 +14,7 @@ type Props = {
 
 export default function ArticleCard({ article }: Props) {
   return (
-    <div className="flex flex-col w-[350px]">
+    <div className="flex flex-col w-[350px] rounded-2xl bg-white shadow pb-1">
       <div className="overflow-hidden rounded-t-2xl mb-1">
         <Image
           src={article.image}

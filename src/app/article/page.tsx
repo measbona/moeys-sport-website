@@ -3,6 +3,7 @@ import * as Banners from "@/assets/banners"
 
 import ArticleCard from "@/components/article-card";
 import SectionHeader from "@/components/section-header";
+import HeaderSeparator from "@/components/header-separator";
 
 const articles = [
   {
@@ -80,8 +81,15 @@ const articles = [
 export default function ArticlePage() {
   return (
     <div className="mt-16">
+      <HeaderSeparator
+        slug="សកម្មភាព"
+        title="បណ្ណាល័យ"
+        description="យើងឧស្សាហ៍ប្រឹងប្រែងលើការលើកកម្ពស់កីឡាករខ្មែរឲ្យមានកិត្តិយសនិងមោទនភាពក្នុងការតំណាងប្រទេសកម្ពុជា ទាំងនៅក្នុងប្រទេស និងអន្តរជាតិ។"
+        image={Banners.subBanner1}
+      />
+
       <SectionHeader title="ព័ត៌មានចុងក្រោយពីអគ្គនាយកដ្ឋានកីឡា">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           {articles.map((article) => (
             <ArticleCard
               key={article.id}

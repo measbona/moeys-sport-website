@@ -49,7 +49,7 @@ export default function MainHeader() {
     <Navbar
       isBlurred
       aria-label="navbar wrapper"
-      className="py-3 fixed bg-white shadow-xs z-20"
+      className="py-3 fixed bg-white shadow-xs z-30"
       classNames={{ wrapper: "mx-auto max-w-6xl px-6" }}
     >
       <NavbarBrand aria-label="navbar logo">

@@ -2,6 +2,7 @@ import * as Banners from "@/assets/banners"
 
 import AthleteCard from "@/components/athlete-card";
 import SectionHeader from "@/components/section-header";
+import HeaderSeparator from "@/components/header-separator";
 
 export default function AthletePage() {
   const athletes = [
@@ -69,6 +70,13 @@ export default function AthletePage() {
 
   return (
     <div className="mt-16">
+      <HeaderSeparator
+        slug="ប្រវត្តិកីឡាករ"
+        title="ប្រវត្តិកីឡាករ"
+        description="កីឡាករជាតិកម្ពុជាបង្ហាញពីកាលវិភាគនៃាការប្រកួតនិងសកម្មភាពកីឡានានាដែលរៀបចំដោយសហព័ន្ធនិងស្ថាប័នកីឡាជាតិដើម្បីជំរុញការចូលរួមនិងការគាំទ្រពីសាធារណះ។"
+        image={Banners.subBanner1}
+      />
+
       <SectionHeader title="ប្រវត្តិកីឡាករ">
         <div className="grid grid-cols-3 gap-6 md:grid-cols-5">
           {athletes.map((athlete) => (

@@ -1,4 +1,6 @@
 "use client"
+import { useRouter } from "next/navigation"
+
 import { Button, Image } from "@heroui/react"
 import Typography from "@/components/ui/typography"
 
@@ -10,6 +12,8 @@ type Props = {
 }
 
 export default function HeaderSeparator({ image, slug, title, description }: Props) {
+  const router = useRouter();
+
   return (
     <div className="relative w-full h-[480px] overflow-hidden">
       <Image
@@ -25,7 +29,7 @@ export default function HeaderSeparator({ image, slug, title, description }: Pro
       <div className="absolute inset-0 flex items-center z-20">
         <div className="container mx-auto max-w-6xl text-white">
           <div className="flex flex-row">
-            <Button className="flex items-center gap-2 cursor-pointer group" onPress={() => {}}>
+            <Button className="flex items-center gap-2 cursor-pointer group" onPress={() => router.push('/')}>
               <Typography variant="body4" className="group-hover:text-[#349FD8] group-hover:underline leading-[1.55]">
                 ទំព័រដើម
               </Typography>
