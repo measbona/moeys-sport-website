@@ -42,7 +42,7 @@ export default function HeaderSeparator({ image, slug, title, description }: Pro
             {title}
           </Typography>
 
-          <Typography variant="body2" className="line-clamp-3 leading-relaxed max-w-2xl">
+          <Typography variant="body2" className="line-clamp-3 leading-relaxed max-w-xl">
             {description}
           </Typography>
         </div>

@@ -10,7 +10,7 @@ const articles = [
     date: "២៥ មករា ២០២៥",
     title:
       "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
-    excerpt:
+    description:
       "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
     image: Banners.article,
     href: "/news/1",
@@ -20,7 +20,7 @@ const articles = [
     date: "២៥ មករា ២០២៥",
     title:
       "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
-    excerpt:
+    description:
       "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
     image: Banners.article,
     href: "/news/1",
@@ -30,7 +30,7 @@ const articles = [
     date: "២៥ មករា ២០២៥",
     title:
       "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
-    excerpt:
+    description:
       "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
     image: Banners.article,
     href: "/news/1",
@@ -40,7 +40,7 @@ const articles = [
     date: "២៥ មករា ២០២៥",
     title:
       "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
-    excerpt:
+    description:
       "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
     image: Banners.article,
     href: "/news/1",
@@ -50,7 +50,7 @@ const articles = [
     date: "២៥ មករា ២០២៥",
     title:
       "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
-    excerpt:
+    description:
       "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
     image: Banners.article,
     href: "/news/1",
@@ -60,7 +60,7 @@ const articles = [
     date: "២៥ មករា ២០២៥",
     title:
       "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
-    excerpt:
+    description:
       "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
     image: Banners.article,
     href: "/news/1",
@@ -70,7 +70,7 @@ const articles = [
     date: "២៥ មករា ២០២៥",
     title:
       "ពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការរវាង Lee Dong Sup ប្រធានក្រុម",
-    excerpt:
+    description:
       "Lee Dong Sup បានចូលរួមក្នុងពិធីចុះហត្ថលេខាលើអនុស្សរណៈសហការជាមួយភាគីពាក់ព័ន្ធ ដើម្បីអភិវឌ្ឍវិស័យកីឡា...",
     image: Banners.article,
     href: "/news/1",
