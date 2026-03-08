@@ -58,7 +58,7 @@ export default function MainHeader() {
 
       <NavbarContent className="flex items-center justify-center sm:flex gap-7 flex-1" justify="center" aria-label="navbar navigation">
         {headerItems.map((item) => {
-          const isActive = item.href === pathName
+          const isActive = pathName === item.href || pathName.startsWith(`${item.href}/`)
 
           return (
             <div key={item.id} className="relative">

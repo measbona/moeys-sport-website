@@ -1,5 +1,6 @@
 "use client";
 import { Image } from "@heroui/react"
+import { useRouter } from "next/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 
@@ -20,6 +21,8 @@ import FederationCard from "@/components/federation-card";
 import RegistrationCard from "@/components/registration-card";
 
 export default function Home() {
+  const router = useRouter()
+
   const federations = [
     {
       title: "សហព័ន្ធកីឡា",
@@ -224,7 +227,7 @@ export default function Home() {
         </Swiper>
       </div>
 
-      <SectionHeader title="សហព័ន្ធកីឡាជាតិ" seeMore={{ label: "មើលបន្ថែមទៀត" }}>
+      <SectionHeader title="សហព័ន្ធកីឡាជាតិ" seeMore={{ label: "មើលបន្ថែមទៀត", onClick: () => router.push('/federation') }}>
         <div className="overflow-x-auto overflow-y-hidden no-scrollbar">
           <div className="flex gap-20 min-w-max">
             {federations.map((confederation, index) => (
@@ -300,7 +303,7 @@ export default function Home() {
         </>
       </SectionHeader>
 
-      <SectionHeader title="ព័ត៌មានចុងក្រោយពីអគ្គនាយកដ្ឋានកីឡា" seeMore={{ label: "មើលព័ត៌មានច្រើនទៀត" }}>
+      <SectionHeader title="ព័ត៌មានចុងក្រោយពីអគ្គនាយកដ្ឋានកីឡា" seeMore={{ label: "មើលព័ត៌មានច្រើនទៀត", onClick: () => router.push('/article') }}>
         <div className="overflow-x-auto no-scrollbar">
           <div className="flex gap-4 min-w-max pb-2">
             {articles.map((article) => (

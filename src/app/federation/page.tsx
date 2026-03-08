@@ -113,7 +113,7 @@ export default function FederationPage() {
       />
 
       <SectionHeader title="សហព័ន្ធកីឡាជាតិទាំងអស់នៅក្នុងប្រទេសកម្ពុជា">
-        <div className="grid grid-cols-5 gap-10 mb-16">
+        <div className="grid grid-cols-5 gap-10">
           {federations.map((confederation, index) => (
             <FederationCard
               key={index}
@@ -124,7 +124,7 @@ export default function FederationPage() {
           ))}
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-16">
           <Button className="flex bg-[#121212] text-white py-2 px-3.5 rounded-full align-middle">
             <Typography variant="body2">បង្ហាញបន្ថែម</Typography>
           </Button>

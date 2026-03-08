@@ -1,4 +1,7 @@
+"use client";
+
 import { Image } from "@heroui/react"
+import { useRouter } from "next/navigation";
 import Typography from "@/components/typography"
 
 type Props = {
@@ -13,6 +16,8 @@ type Props = {
 }
 
 export default function ArticleCard({ article }: Props) {
+  const router = useRouter()
+
   return (
     <div className="flex flex-col w-[350px] rounded-2xl bg-white shadow pb-1">
       <div className="overflow-hidden rounded-t-2xl mb-1">
@@ -36,7 +41,7 @@ export default function ArticleCard({ article }: Props) {
           {article.description}
         </Typography>
 
-        <div className="flex items-center gap-2 cursor-pointer group mt-3" onClick={() => {}}>
+        <div className="flex items-center gap-2 cursor-pointer group mt-3" onClick={() => router.push(`/article/${article.id}`)}>
           <Typography variant="body4" className="text-[#349FD8] group-hover:underline">
             មើលលម្អិត
           </Typography>
