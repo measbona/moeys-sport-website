@@ -7,7 +7,7 @@ type Props = {
   src: string
 }
 
-export default function ConfederationCard({ title, subtitle, src } : Props) {
+export default function FederationCard({ title, subtitle, src } : Props) {
   return (
     <div className="flex flex-col gap-3 items-center">
       <Image src={src} width={140} alt={title + subtitle} />
