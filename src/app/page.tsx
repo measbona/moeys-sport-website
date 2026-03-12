@@ -81,36 +81,66 @@ export default function Home() {
       name: "ស៊ុន សុភក្តិ",
       role: "កីឡាករជម្រើសជាតិ",
       avatar: Banners.althele,
+      position: "ខ្សែបំរើ",
+      age: 16,
+      height: 1.70,
+      gender: "ប្រុស",
+      clubName: "វិសាខា",
     },
     {
       id: "2",
       name: "ឯម លាភ",
       role: "កីឡាករជម្រើសជាតិ",
       avatar: Banners.althele,
+      position: "ខ្សែបំរើ",
+      age: 16,
+      height: 1.70,
+      gender: "ប្រុស",
+      clubName: "វិសាខា",
     },
     {
       id: "3",
       name: "ពេជ សុវណ្ណ",
       role: "កីឡាករជម្រើសជាតិ",
       avatar: Banners.althele,
+      position: "ខ្សែបំរើ",
+      age: 16,
+      height: 1.70,
+      gender: "ប្រុស",
+      clubName: "វិសាខា",
     },
     {
       id: "4",
       name: "ភូ សុខា",
       role: "កីឡាករជម្រើសជាតិ",
       avatar: Banners.althele,
+      position: "ខ្សែបំរើ",
+      age: 16,
+      height: 1.70,
+      gender: "ប្រុស",
+      clubName: "វិសាខា",
     },
     {
       id: "5",
       name: "ជា សុខា",
       role: "កីឡាករជម្រើសជាតិ",
       avatar: Banners.althele,
+      position: "ខ្សែបំរើ",
+      age: 16,
+      height: 1.70,
+      gender: "ប្រុស",
+      clubName: "វិសាខា",
     },
     {
       id: "6",
       name: "ជា សុខា",
       role: "កីឡាករជម្រើសជាតិ",
       avatar: Banners.althele,
+      position: "ខ្សែបំរើ",
+      age: 16,
+      height: 1.70,
+      gender: "ប្រុស",
+      clubName: "វិសាខា",
     }
   ]
 
@@ -290,13 +320,8 @@ export default function Home() {
           <SportsTab items={sports} />
           <div className="overflow-x-auto overflow-y-hidden no-scrollbar">
             <div className="flex gap-10">
-              {athletes.map((athlete) => (
-                <AthleteCard
-                  key={athlete.id}
-                  name={athlete.name}
-                  role={athlete.role}
-                  avatar={athlete.avatar}
-                />
+              {athletes.map(({ id, ...athlete }) => (
+                <AthleteCard key={id} {...athlete} />
               ))}
             </div>
           </div>
