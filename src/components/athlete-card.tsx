@@ -38,7 +38,7 @@ export default function AthleteCard({ name, role, avatar, position, age, height,
         </div>
 
         {/* Back */}
-        <div className="absolute inset-1.5 flex flex-col rounded-2xl bg-white shadow-md text-black [transform:rotateY(180deg)] [backface-visibility:hidden] py-5">
+        <div className="absolute inset-1.5 flex flex-col rounded-2xl bg-white shadow-md text-black [transform:rotateY(180deg)] [backface-visibility:hidden] py-6">
           <div className="text-center">
             <Typography variant="h5" className="font-semibold mb-3">
               {name}
