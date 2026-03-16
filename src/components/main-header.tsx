@@ -49,14 +49,15 @@ export default function MainHeader() {
     <Navbar
       isBlurred
       aria-label="navbar wrapper"
-      className="py-3 fixed bg-white shadow-xs z-30"
-      classNames={{ wrapper: "mx-auto max-w-6xl px-6" }}
+      className="py-3 fixed bg-white shadow-xs z-30 px-4"
+      maxWidth="2xl"
+      classNames={{ wrapper: "px-48" }}
     >
       <NavbarBrand aria-label="navbar logo">
         <Image height={45} alt="moeys-logo" src={Images.moeysLogo} />
       </NavbarBrand>
 
-      <NavbarContent className="flex items-center justify-center sm:flex gap-7 flex-1" justify="center" aria-label="navbar navigation">
+      <NavbarContent className="gap-7 mr-20" aria-label="navbar navigation">
         {headerItems.map((item) => {
           const isActive = pathName === item.href || pathName.startsWith(`${item.href}/`)
 
@@ -80,12 +81,12 @@ export default function MainHeader() {
         })}
       </NavbarContent>
 
-      <NavbarContent justify="end" aria-label="navbar signup">
+      <NavbarContent aria-label="navbar signup">
         <LanguageDropdown />
         <Button
           disableRipple
-          className="flex bg-[#121212] text-white py-2 px-3.5 rounded-full"
-          startContent={<Image height={14} alt="moeys-logo" src={Icons.userIcon} />}
+          className="bg-[#121212] text-white rounded-full flex-shrink-0"
+          startContent={<Image alt="moeys-logo" width={12} src={Icons.userIcon} />}
         >
           <Typography variant="body2">ចូលគណនី</Typography>
         </Button>

@@ -41,6 +41,7 @@ export default function SportTab({ items }: Props) {
               <Button
                 key={item?.id}
                 disableRipple
+                variant="light"
                 className={clsx("flex py-2 px-3.5 rounded-full", {
                   "bg-[#121212] text-white": active,
                   "text-[#8C8C8C]": !active

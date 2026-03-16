@@ -30,10 +30,11 @@ export default function RegistrationCard({ id, title } : Props) {
         </div>
 
         <Button
+          disableRipple
           className="flex bg-[#121212] py-2 px-3.5 rounded-full w-fit mt-11"
           startContent={<Image height={14} alt="moeys-logo" src={Icons.userIcon} />}
         >
-          <Typography variant="body4">ចុះឈ្មោះឥឡូវនេះ</Typography>
+          <Typography variant="body3" className="text-white">ចុះឈ្មោះឥឡូវនេះ</Typography>
         </Button>
       </div>
     </div>
