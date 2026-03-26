@@ -46,8 +46,8 @@ export default function ArticleDetailPage() {
   return (
     <div className="mt-16 container mx-auto max-w-6xl flex flex-col gap-3">
       <div>
-        <div className="mt-16 flex-row inline-flex bg-gray-100 backdrop-blur-md rounded-full px-2 py-1 mr-2 -ml-2">
-          <div className="flex items-center gap-2 cursor-pointer group" onClick={() => router.push('/')}>
+        <div className="mt-12 flex-row inline-flex bg-gray-100 backdrop-blur-md rounded-full px-2 py-1 mr-2 -ml-2">
+          <div className="flex items-center cursor-pointer group" onClick={() => router.push('/')}>
             <Typography variant="body4" className="group-hover:text-[#349FD8] group-hover:underline leading-[1.55]">
               ទំព័រដើម
             </Typography>
