@@ -257,10 +257,10 @@ export default function Home() {
         </Swiper>
       </div>
 
-      <SectionHeader title="សហព័ន្ធកីឡាជាតិ" seeMore={{ label: "មើលបន្ថែមទៀត", onClick: () => router.push('/federation') }}>
-        <div className="overflow-x-auto overflow-y-hidden no-scrollbar">
-          <div className="flex gap-20 min-w-max">
-            {federations.map((confederation, index) => (
+      <SectionHeader title="សហព័ន្ធកីឡាជាតិ" contentWidth="max-w-none" seeMore={{ label: "មើលបន្ថែមទៀត", onClick: () => router.push('/federation') }}>
+        <div className="overflow-x-auto no-scrollbar">
+          <div className="flex gap-20 min-w-max animate-scroll">
+            {[...federations, ...federations, ...federations].map((confederation, index) => (
               <FederationCard
                 key={index}
                 src={confederation.src}

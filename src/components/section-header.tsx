@@ -17,9 +17,17 @@ type Props = {
   titleAlign?: "start" | "center"
   seeMore?: SeeMoreProps
   children?: ReactNode;
+  contentWidth?: "max-w-6xl" | "max-w-none"
 }
 
-export default function SectionHeader({ title, seeMore, titleAlign = "start", children, mainWrapper }: Props) {
+export default function SectionHeader({
+  title,
+  seeMore,
+  titleAlign = "start",
+  children,
+  mainWrapper,
+  contentWidth = "max-w-6xl"
+}: Props) {
   const hasSeeMore = Boolean(seeMore)
 
   return (
@@ -41,7 +49,7 @@ export default function SectionHeader({ title, seeMore, titleAlign = "start", ch
       </div>
 
       {children && (
-        <div className="mx-auto w-full max-w-6xl">
+        <div className={clsx(contentWidth, "mx-auto w-full max-w-6xl")}>
           {children}
         </div>
       )}

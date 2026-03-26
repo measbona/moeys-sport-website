@@ -7,7 +7,16 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --swiper-pagination-color: #ffffff;
+  --swiper-pagination-bottom: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.25);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 5px;
+  --swiper-pagination-bullet-active-width: 50px;
+  --swiper-pagination-bullet-active-height: 50px;
 }
 
 @theme inline {
@@ -30,40 +39,21 @@ body {
   font-family: var(--font-khmer);
 }
 
-/* Swiper Pagination Container */
-.swiper-pagination {
-  bottom: 35px !important;
-  display: flex;
-  justify-content: center;
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-/* Rounded glass background */
-.swiper-pagination::after {
-  content: "";
-  position: absolute;
-  padding: 12px 40px;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  z-index: -1;
+.animate-scroll {
+  animation: scroll 20s linear infinite;
 }
 
-/* Default bullet */
-.swiper-pagination-bullet {
-  width: 24px;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.6);
-  opacity: 1;
-  margin: 0 6px !important;
-  transition: all 0.3s ease;
-}
-
-/* Active bullet */
-.swiper-pagination-bullet-active {
-  width: 24px;
-  height: 24px;
-  border-radius: 9999px;
-  background: white;
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
 
 /* Hide scrollbar but keep scrolling */
