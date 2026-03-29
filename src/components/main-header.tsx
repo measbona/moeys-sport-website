@@ -23,7 +23,7 @@ const headerItems = [
   {
     id: "partner",
     name: "អង្គភាពចំណុះ",
-    href: '/partner'
+    href: '/subordinate-unit'
   },
   {
     id: "athlete",
