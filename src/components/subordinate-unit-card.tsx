@@ -9,7 +9,6 @@ type Props = {
   name: string
   short: string
   logo: string
-  onClick: (id: unknown) => void
 }
 
 const documents = [
@@ -47,13 +46,10 @@ const documents = [
   },
 ]
 
-export default function SubordinateUnitCard({ id, name, short, logo, onClick } : Props) {
+export default function SubordinateUnitCard({ name, short, logo } : Props) {
   const [open, setOpen] = useState<boolean>(false)
 
-  const handleOpen = () => {
-    onClick?.(id)
-    setOpen(true)
-  }
+  const handleOpen = () => setOpen(!open)
   
   return (
     <div className="group bg-white rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-md transition-all duration-200 text-center relative overflow-hidden p-5">
@@ -94,7 +90,7 @@ export default function SubordinateUnitCard({ id, name, short, logo, onClick } :
         unitLogo={logo}
         unitShort={short}
         documents={documents}
-        onClose={() => setOpen(false)}
+        onClose={() => setOpen(!open)}
       />
     </div>
   )

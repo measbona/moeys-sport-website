@@ -46,8 +46,6 @@ export default function SubordinateUnitPage() {
     },
   ];
 
-  const onClick = (id: unknown) => {}
-
   return (
     <div className="mt-16">
       <HeaderSeparator
@@ -58,8 +56,8 @@ export default function SubordinateUnitPage() {
       />
       <SectionHeader title="អង្គភាពចំណុះទាំងអស់នៅក្នុងស្ថាប័ន">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-          {units.map((unit, i) => (
-            <SubordinateUnitCard key={i} {...unit} onClick={onClick} />
+          {units.map((unit) => (
+            <SubordinateUnitCard key={unit.id} {...unit} />
           ))}
         </div>
       </SectionHeader>
